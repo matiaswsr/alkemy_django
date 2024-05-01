@@ -1,1 +1,3 @@
-Proyecto Django - Curso Alkemy POO Python
+Proyecto Django - Curso Alkemy POO Python - 2024
+
+Matías Santos
