@@ -1,0 +1,12 @@
+{% load static %}
+
+<p class="text-center p-3 bg-dark" id="pie">Desarrolla: Matías Santos</p>
+
+{% block js %}
+    <script>
+        let fecha = new Date();
+        let elemento = document.createElement("p");        
+        elemento.innerHTML = `Django, ${fecha.getFullYear()} - Todos los Derechos Reservados &copy; .`;
+        document.querySelector("#pie").appendChild(elemento);
+    </script>
+{% endblock %}

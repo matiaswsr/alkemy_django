@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Matias Santos{% endblock %}
+
+{% block css %}
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <figure class="d-flex align-items-center justify-content-center" id="imagen-principal">
+        <img src="{% static 'img/django.png' %}" class="img-fluid">
+    </figure>
+
+    <section class="mb-5 mx-auto col-4">
+        <a href="{% url 'compra_app:agregar_proveedor' %}" class="d-block badge bg-primary p-3 text-uppercase mb-3">Agregar Proveedor</a>
+        <a href="{% url 'compra_app:agregar_producto' %}" class="d-block badge bg-success p-3 text-uppercase mb-3">Agregar Producto</a>
+        <a href="{% url 'compra_app:listado_proveedores' %}" class="d-block badge bg-warning p-3 text-uppercase mb-3">Listado de Proveedores</a>
+        <a href="{% url 'compra_app:listado_productos' %}" class="d-block badge bg-info p-3 text-uppercase">Listado de Productos</a>
+    </section>
+{% endblock %}

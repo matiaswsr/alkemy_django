@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#footer{
+    height: 10rem; 
+    margin-top: 5rem; 
+    color: gray;
+}
+
+#imagen-principal{
+    margin-top: 10rem;
+}

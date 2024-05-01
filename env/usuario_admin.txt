@@ -1,0 +1,6 @@
+
+
+Sitio Administrador:
+
+user: admin
+passw: admin

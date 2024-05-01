@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Productos
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="text-center display-4 text-success mt-3">Listado de Productos</h1>
+
+    <section class="p-3">
+        <table class="table mt-3">
+            <thead class="text-center table-dark">
+                <tr>
+                    <td>ID</td>
+                    <td>Proveedor</td>
+                    <td>Nombre</td>
+                    <td>Precio</td>
+                    <td>Stock actual</td>                    
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                {% for p in productos %}
+                    <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.proveedor.nombre}} {{p.proveedor.apellido}}</td>
+                        <td>{{p.nombre}}</td>
+                        <td>$ {{p.precio}}</td>
+                        <td>{{p.stock_actual}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+{% endblock %}

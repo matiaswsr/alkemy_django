@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="display-4 mt-3 text-center text-success mb-3">Registrar Producto</h1>
+
+    <form method="POST" class="p-3 w-50 mx-auto" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <section class="mb-3">
+            <label for="id_proveedor" class="form-label">Seleccionar proveedor:</label>
+            {{form.proveedor}}
+        </section>
+
+        <section class="mb-3">
+            <label for="id_nombre" class="form-label">Ingrese su nombre:</label>
+            <input type="text" name="nombre" class="form-control" required id="id_nombre">
+        </section>
+  
+        <section class="mb-3">
+            <label for="id_precio" class="form-label">Precio:</label>
+            <input type="number" min="0" name="precio" class="form-control" required id="id_precio">   
+        </section>
+  
+        <section class="mb-3">
+            <label for="id_stock_actual" class="form-label">Stock:</label>
+            <input type="number" min="0" name="stock_actual" class="form-control" required id="id_stock_actual">            
+        </section>
+
+        <input type="submit" value="Guardar datos" class="btn btn-success">
+    </form>
+    
+{% endblock %}
